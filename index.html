@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111820">
+  <title>Sistema de Teste do Polígrafo | CBI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="cabecalho">
+      <p class="identificacao">CBI <span aria-hidden="true">/</span> INVESTIGAÇÃO</p>
+      <h1>Sistema de Teste do Polígrafo</h1>
+      <p class="subtitulo">Responda às perguntas para concluir a avaliação.</p>
+    </header>
+
+    <section id="painel-teste" class="painel" aria-labelledby="pergunta" aria-live="polite">
+      <div class="progresso-linha">
+        <span id="contador-perguntas">Pergunta 1 de 10</span>
+        <span id="contador-respostas">0 respostas “Sim”</span>
+      </div>
+      <div class="progresso-fundo" aria-hidden="true">
+        <div id="barra-progresso" class="progresso-preenchido"></div>
+      </div>
+
+      <p class="rotulo">PERGUNTA ATUAL</p>
+      <h2 id="pergunta">Você esteve no local do crime no dia da ocorrência?</h2>
+
+      <div class="botoes-resposta">
+        <button id="botao-sim" class="botao botao-sim" type="button">Sim</button>
+        <button id="botao-nao" class="botao botao-nao" type="button">Não</button>
+      </div>
+    </section>
+
+    <section id="painel-resultado" class="painel resultado" aria-labelledby="titulo-resultado" hidden>
+      <p class="rotulo">RESULTADO FINAL</p>
+      <h2 id="titulo-resultado">Classificação</h2>
+      <p class="total-sim"><strong id="total-sim">0</strong> de 10 respostas “Sim”</p>
+      <p id="mensagem-resultado" class="mensagem-resultado"></p>
+      <p class="aviso-legal">Esta classificação é apenas uma simulação baseada nas respostas, não uma comprovação de culpa ou mentira.</p>
+      <button id="botao-reiniciar" class="botao botao-reiniciar" type="button">Reiniciar teste</button>
+    </section>
+
+    <footer class="rodape">CBI · Sistema de avaliação investigativa</footer>
+  </main>
+</body>
+</html>
